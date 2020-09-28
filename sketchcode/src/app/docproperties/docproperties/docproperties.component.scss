@@ -1,0 +1,331 @@
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
+@import '~igniteui-angular/lib/core/styles/components/checkbox/checkbox-component';
+@import '~igniteui-angular/lib/core/styles/components/checkbox/checkbox-theme';
+@import '~igniteui-angular/lib/core/styles/components/icon/icon-component';
+@import '~igniteui-angular/lib/core/styles/components/icon/icon-theme';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-component';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-theme';
+@import '~igniteui-angular/lib/core/styles/components/combo/combo-component';
+@import '~igniteui-angular/lib/core/styles/components/combo/combo-theme';
+
+@import '../../../themes/angularlight/index';
+
+
+main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+	overflow: auto;
+    height: 385px;
+    width: 1390px;
+    background-color: rgb(255, 255, 255);
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+
+.docproperties {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.billof-lading-type-1 {
+width: 384px;
+min-width: 384px;
+
+}
+.receiptofshipmentindicator-1 {
+width: 384px;
+min-width: 384px;
+
+}
+.export-reference-1 {
+width: 384px;
+min-width: 384px;
+
+}
+.numberof-originals-1 {
+width: 180px;
+min-width: 180px;
+
+}
+.numberof-copies-1 {
+width: 180px;
+min-width: 180px;
+
+}
+.quantity {
+width: 385px;
+min-width: 385px;
+height: 64px;
+min-height: 64px;
+margin-top: 29px;
+
+display: flex;
+flex-direction: row;
+flex-shrink: 0;
+padding: 0;
+}
+
+.inputs {
+
+display: flex;
+flex-direction: column;
+padding: 0;
+flex-shrink: 0;
+flex: 1;
+}
+
+.specialrequests {
+display: block;
+color: igx-color($default-palette, grays, 900);
+margin-top: 0px !important;
+width: 117px;
+min-width: 117px;
+height: 28px;
+min-height: 28px;
+
+}
+.specialrequests-1 {
+width: 411px;
+min-width: 411px;
+height: 127px;
+min-height: 127px;
+margin-top: 23px;
+margin-left: 87px;
+
+display: flex;
+flex-direction: column;
+padding: 0;
+flex-shrink: 0;
+}
+
+.certificatesrequire {
+display: block;
+color: igx-color($default-palette, grays, 900);
+margin: 0 240px 0 auto !important;
+
+width: 145px;
+min-width: 145px;
+height: 28px;
+min-height: 28px;
+
+}
+.l-c-number-1 {
+width: 385px;
+min-width: 385px;
+
+}
+.certificatesrequired {
+width: 385px;
+min-width: 385px;
+height: 291px;
+min-height: 291px;
+margin: 23px 0 0 auto;
+
+display: flex;
+flex-direction: column;
+padding: 0;
+flex-shrink: 0;
+}
+
+.inputs-row {
+margin-top: 23px;
+margin-right: 65px;
+margin-left: 17px;
+
+display: flex;
+flex-direction: row;
+flex-shrink: 0;
+padding: 0;
+}
+
+@function get-palette($palette, $variant: 'light') {
+	$p: igx-color($palette, 'primary');
+	$s: igx-color($palette, 'secondary');
+	@return igx-palette($primary: $p,
+		$secondary: $s,
+		$grays: if($variant == 'light', #fff, #000)
+	);
+}
+@function get-schema($variant: 'light') {
+	@return map-get((
+		dark: $dark-schema,
+		light: $light-schema
+	), $variant);
+}
+
+$billof-lading-type-theme: igx-input-group-theme(
+$idle-bottom-line-color: igx-color($default-palette, grays),
+$box-background: transparent,
+$border-background: rgba(0, 0, 0, 0),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$receiptofshipmentindicator-theme: igx-input-group-theme(
+$idle-bottom-line-color: igx-color($default-palette, grays),
+$box-background: transparent,
+$border-background: rgba(0, 0, 0, 0),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$export-reference-theme: igx-input-group-theme(
+$idle-bottom-line-color: igx-color($default-palette, grays),
+$box-background: transparent,
+$border-background: rgba(0, 0, 0, 0),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$numberof-originals-theme: igx-input-group-theme(
+$idle-bottom-line-color: igx-color($default-palette, grays),
+$box-background: transparent,
+$border-background: rgba(0, 0, 0, 0),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$numberof-copies-theme: igx-input-group-theme(
+$idle-bottom-line-color: igx-color($default-palette, grays),
+$box-background: transparent,
+$border-background: rgba(0, 0, 0, 0),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$alternatespellingoflocations-theme: igx-checkbox-theme(
+$fill-color: igx-color($default-palette, primary, 800),
+$tick-color: rgb(255, 255, 255),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$expressrelease-theme: igx-checkbox-theme(
+$fill-color: igx-color($default-palette, primary, 800),
+$tick-color: rgb(255, 255, 255),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$vessel-cetificate-theme: igx-checkbox-theme(
+$fill-color: igx-color($default-palette, primary, 800),
+$tick-color: rgb(255, 255, 255),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$vesselseaworthycertificate-theme: igx-checkbox-theme(
+$fill-color: igx-color($default-palette, primary, 800),
+$tick-color: rgb(255, 255, 255),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$vesselagecertificate-theme: igx-checkbox-theme(
+$fill-color: igx-color($default-palette, primary, 800),
+$tick-color: rgb(255, 255, 255),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$freetimecertificate-theme: igx-checkbox-theme(
+$fill-color: igx-color($default-palette, primary, 800),
+$tick-color: rgb(255, 255, 255),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+$l-c-number-theme: igx-input-group-theme(
+$idle-bottom-line-color: igx-color($default-palette, grays),
+$box-background: transparent,
+$border-background: rgba(0, 0, 0, 0),
+$schema: get-schema('dark'),
+$palette: get-palette($default-palette, 'dark')
+);
+
+
+:host ::ng-deep {
+.billof-lading-type {
+@include igx-input-group($billof-lading-type-theme);
+}
+
+.receiptofshipmentindicator {
+@include igx-input-group($receiptofshipmentindicator-theme);
+margin-top: 11px;
+
+}
+
+.export-reference {
+@include igx-input-group($export-reference-theme);
+margin-top: 21px;
+
+}
+
+.numberof-originals {
+@include igx-input-group($numberof-originals-theme);
+}
+
+.numberof-copies {
+@include igx-input-group($numberof-copies-theme);
+margin-left: 24px;
+
+}
+
+.alternatespellingoflocations {
+@include igx-checkbox($alternatespellingoflocations-theme);
+margin-top: 6px;
+
+}
+
+.expressrelease {
+@include igx-checkbox($expressrelease-theme);
+}
+
+.vessel-cetificate {
+@include igx-checkbox($vessel-cetificate-theme);
+margin-top: 8px;
+margin-left: 1px;
+
+}
+
+.vesselseaworthycertificate {
+@include igx-checkbox($vesselseaworthycertificate-theme);
+margin-top: 8px;
+margin-left: 1px;
+
+}
+
+.vesselagecertificate {
+@include igx-checkbox($vesselagecertificate-theme);
+margin-top: 8px;
+margin-left: 1px;
+
+}
+
+.freetimecertificate {
+@include igx-checkbox($freetimecertificate-theme);
+margin-top: 8px;
+margin-left: 1px;
+
+}
+
+.l-c-number {
+@include igx-input-group($l-c-number-theme);
+margin: 46px 0 0 auto;
+
+}
+
+}
+

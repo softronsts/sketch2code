@@ -1,0 +1,84 @@
+<main class="igx-typography"><form>
+<div class="docproperties">
+<div class="inputs-row"><div class="inputs"><div class="billof-lading-type">
+<igx-combo type="border"
+[data]="bolTypes" displayKey="description" valueKey="code" class="billof-lading-type-1" >
+</igx-combo>
+</div>
+
+<div class="receiptofshipmentindicator">
+<igx-combo type="border"
+[data]="shipmentReceiptIndicators" displayKey="description" valueKey="code" class="receiptofshipmentindicator-1" >
+<label igxLabel>Receipt of shipment indicator</label>
+</igx-combo>
+</div>
+
+<div class="export-reference">
+<igx-input-group type="border" class="export-reference-1" >
+<input igxInput type="text" />
+</igx-input-group>
+</div>
+
+<div class="quantity"><div class="numberof-originals">
+<igx-input-group type="border" class="numberof-originals-1" >
+<input igxInput type="text" />
+</igx-input-group>
+</div>
+
+<div class="numberof-copies">
+<igx-input-group type="border" class="numberof-copies-1" >
+<input igxInput type="text" />
+</igx-input-group>
+</div>
+
+</div>
+</div>
+<div class="specialrequests-1"><span class="igx-typography__body-1 specialrequests">Special requests</span>
+<div class="alternatespellingoflocations">
+<igx-checkbox
+name="IsAlternateSpelling" formControlName="IsAlternateSpelling" >Alternate spelling of locations
+</igx-checkbox>
+</div>
+
+<div class="expressrelease">
+<igx-checkbox
+name="isExpressRelease" formControlName="isExpressRelease" >Express release
+</igx-checkbox>
+</div>
+
+</div>
+<div class="certificatesrequired"><span class="igx-typography__body-1 certificatesrequire">Certificates required</span>
+<div class="vessel-cetificate">
+<igx-checkbox
+name="isVesselCertificate" formControlName="isVesselCertificate" >Vessel certificate
+</igx-checkbox>
+</div>
+
+<div class="vesselseaworthycertificate">
+<igx-checkbox
+name="isSeaworthyCertificate" formControlName="isSeaworthyCertificate" >Vessel seaworthy certificate
+</igx-checkbox>
+</div>
+
+<div class="vesselagecertificate">
+<igx-checkbox
+name="isAgeCertificate" formControlName="isAgeCertificate" >Vessel age certificate
+</igx-checkbox>
+</div>
+
+<div class="freetimecertificate">
+<igx-checkbox
+name="isFreetimeCertificate" formControlName="isFreetimeCertificate" >Free-time certificate
+</igx-checkbox>
+</div>
+
+<div class="l-c-number">
+<igx-input-group type="border" class="l-c-number-1" >
+<input igxInput type="text" />
+<igx-hint>L.C. Number</igx-hint>
+</igx-input-group>
+</div>
+
+</div>
+</div>
+</div></form></main>
